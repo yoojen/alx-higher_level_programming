@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""This module contains a script that lists all states from hbtn_0e_0_usa"""
+
+
 import sys
 import MySQLdb
+
 
 def main():
     conn = MySQLdb.connect(
