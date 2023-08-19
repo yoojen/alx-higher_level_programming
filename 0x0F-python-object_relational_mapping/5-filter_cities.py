@@ -12,6 +12,6 @@ if __name__ == '__main__':
     cur.execute("SELECT cities.id, cities.name, states.name from cities, \
                         states where cities.state_id = states.id")
     query_rows = cur.fetchall()
-    [print(row[1]) for row in query_rows if row[2] == sys.argv[4]]
+    [print(", ".join(row[1] for row in query_rows if row[2] == sys.argv[4]))]
     cur.close()
     conn.close()
