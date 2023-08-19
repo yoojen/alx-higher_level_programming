@@ -12,9 +12,9 @@ Base = declarative_base()
 
 
 class State(Base):
-      """Represents a city for a MySQL database.
-            args: -> id --- name
-      """
+    """Represents a city for a MySQL database.
+        args: -> id --- name
+    """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
