@@ -17,7 +17,6 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE name='{}'".format(sys.argv[4]))
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    [print(state) for state in query_rows]
     cur.close()
     conn.close()
