@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""this model creates state class"""
+"""this model creates State class
+      and connect to state table from MySQL
+"""
 
 
 from sqlalchemy import Column, Integer, String
@@ -10,7 +12,9 @@ Base = declarative_base()
 
 
 class State(Base):
-      """Represents a city for a MySQL database."""
+      """Represents a city for a MySQL database.
+            args: -> id --- name
+      """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
