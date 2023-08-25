@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-""" script that changes the name of a State object from the database hbtn_0e_6_usa"""
+""" script that changes the name of a State object\
+        from the database hbtn_0e_6_usa"""
 
 
 import MySQLdb
+from os import sys
 from model_state import Base, State
-from sqlalchemy import create _engine
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
@@ -17,4 +19,4 @@ if __name__ == "__main__":
 
     state = session.query(State).filter_by(id = 2).first()
     state.name = "New Mexico"
-    state.commit()
+    session.commit()
