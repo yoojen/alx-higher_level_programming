@@ -1,3 +1,3 @@
 #!/bin/bash
 #curl site without using pipe
-curl -s --write-out "%{http_code}" "$1"
+curl -so /dev/null --write-out "%{http_code}" "$1"
