@@ -3,6 +3,7 @@
 
 
 def find_peak(list_of_integers):
+    """returns peak"""
     offset = 1
     if len(list_of_integers) < 1:
         return None
