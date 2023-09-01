@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-post request using request package 
+post request using request package
 """
 
 if __name__ == '__main__':
