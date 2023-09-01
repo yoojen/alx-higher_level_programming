@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-fetch holberton /statue page
+fetch data from startup page
 """
+
 
 if __name__ == '__main__':
     import urllib.request
