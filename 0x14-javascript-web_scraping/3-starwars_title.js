@@ -2,15 +2,13 @@
 
 const request = require('request');
 
-const movie_id = process.argv[2]
-const url = `https://swapi-api.alx-tools.com/api/films/${movie_id}`;
+const movieId = process.argv[2];
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 request
-.get(url, function(err, response, body)
-{
-if (err) {
-console.log(err);
-} else {
-console.log(JSON.parse(body).title);
-}
-});
-
+  .get(url, function (err, response, body) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(JSON.parse(body).title);
+    }
+  });
